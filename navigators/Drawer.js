@@ -1,0 +1,20 @@
+import React from 'react';
+import Profile from '../screens/profile';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import TabNavigator from './BottomTab';
+const Drawer = createDrawerNavigator()
+
+const DrawerNavigator = () => {
+    return (
+        <Drawer.Navigator
+            screenOptions={{
+                headerShown: false
+            }}
+        >
+            <Drawer.Screen name='Home' component={TabNavigator} />
+            <Drawer.Screen name='Profile' component={Profile} />
+        </Drawer.Navigator>
+    )
+}
+
+export default DrawerNavigator
